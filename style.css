@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Fasthand&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    margin: 20px 40px 20px 40px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.menu{
+    display: none;
+}
+
+.name{
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.close-button{
+    display: none;
+}
+
+.links{
+    margin-top: 20px;
+}
+
+.links a{
+    text-decoration: none;
+    margin: 10px;
+    color: rgb(234, 234, 234);
+    font-size: 20px;
+}
+
+.message{
+    margin-top: 80px;
+}
+
+.profile img{
+    width: 500px;
+    border: 10px solid rgb(15, 15, 15);
+    border-radius: 50%;
+}
+
+.greetings{
+    color: white;
+    font-size: 40px;
+    padding: 30px 0 0 0;
+}
+
+.job{
+    color: rgb(164, 164, 164);
+    padding: 20px 0 50px 0;
+
+}
+
+.download-cv{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    background-color: rgb(60, 170, 60);
+    margin-right: 10px;
+}
+
+.download-cv:hover{
+    background-color: rgba(60, 170, 60, 0.799);
+}
+
+.learn-more{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    border: 1px solid white;
+}
+
+.learn-more:hover{
+    background-color: silver;
+    color: black;
+    border: 1px solid silver;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    margin: 80px;
+}
+
+.about-me h1,p, #projects h1, #contact h1{
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+
+.about-me h1, #projects h1, #contact h1{
+    margin: 10px 20px 30px 10px;
+    font-size: 40px;
+}
+
+.about-me p, #projects h1{
+    margin: 10px 300px;
+}
+
+.cert-topic h1, .tech-stack h1{
+    color: gainsboro;
+    text-align: center;
+    margin: 20px 40px;
+}
+
+.certifications, .projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.certifications div, .projects div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    background-color: #212121;
+    margin: 20px 10px 50px 70px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.certifications div:hover, .projects div:hover{
+    border-bottom: 3px solid rgb(60, 170, 60);
+}
+
+.certifications p, .projects p{
+    color: rgb(60, 170, 60);
+    font-size: large;
+    font-weight: bold;
+}
+
+.certifications a, .projects a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.certifications a:hover, .projects a:hover{
+    color: rgb(106, 158, 255);
+}
+
+.certifications img, .projects img{
+    width: 200px;
+}
+
+.techs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.techs div{
+    margin: 10px;
+    padding: 15px;
+    background-color: #212121;
+    border: 2px solid #212121; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.techs div:hover{
+    background-color: #1c1c1c;
+}
+
+.contact-form{
+    margin: 20px 20px 20px 370px;
+}
+
+.contact-form input {
+    width: 200px;
+    padding: 5px;
+    margin: 10px;
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: gray;
+    outline: none; 
+}
+  
+
+.contact-form textarea{
+    margin: 10px;
+    padding: 5px;
+    background-color: black;
+    border: 1px solid grey;
+    outline: none;
+    color: gray;
+}
+
+.contact-form button{
+    margin: 10px 10px 10px 160px;
+    padding: 10px;
+    width: 140px;
+    font-size: larger;
+    color: white;
+    background-color: rgb(60, 170, 60);
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover{
+    background-color: rgba(60, 170, 60, 0.799);
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0 0;
+}
+
+.socials a, img{
+    margin: 10px;
+    width: 40px;
+}
+
+hr{
+    margin: 20px;
+    border: 1px solid gray;
+}
+
+.copyright p{
+    margin: 50px 20px 0 40px;
+}
+
+@media only screen and (max-width: 576px) {
+    .links{
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.788);
+        z-index: 100;
+        transition: width 0.5s;
+        transition-timing-function: ease-in-out
+    }
+
+    .links.open {
+        width: 250px;
+    }
+      
+    .links a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style-type: none;
+        padding: 10px;
+        margin: 0;
+        padding: 20px;
+        cursor: pointer;
+    }
+
+    .name{
+        font-size: 30px;
+        margin-left: 0;
+    }
+    
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+
+    body{
+        margin: 10px;
+    }
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .message{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .greetings{
+        font-size: 150%;
+    }
+
+    .download-cv, .learn-more{
+        display: block;
+        margin: 10px;
+    }
+
+
+    .intro{
+        display: flex;
+        flex-direction: column-reverse;  
+    }
+
+    .profile img{
+        width: 100%;
+        border: 10px solid rgb(15, 15, 15);
+        border-radius: 50%;
+        margin: 0;
+    }
+
+    .greetings{
+        text-align: center;
+        margin: 10px;
+    }
+
+    .job{
+        text-align: center;
+        padding: 10px 0 20px 0;
+    }
+
+    .about-me p, #projects h1{
+        margin: 10px;
+    }
+
+    .certifications div, .projects div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        background-color: #212121;
+        border-radius: 10px;
+        padding: 20px;
+        margin: auto;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    .certifications, .projects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form{
+        margin: 20px;
+    }
+
+    .contact-form input {
+        width: 100%;
+        padding: 5px;
+        margin: 10px;
+        background-color: black;
+        border: none;
+        border-bottom: 1px solid gray;
+        color: gray;
+        outline: none; 
+    }
+
+    .contact-form textarea{
+        width: 100%;
+        margin: 10px;
+        padding: 5px;
+        background-color: black;
+        border: 1px solid grey;
+        outline: none;
+        color: gray;
+    }
+
+    .contact-form button{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        width: 120px;
+        font-size: larger;
+        color: white;
+        background-color: rgb(60, 170, 60);
+        border: none;
+        cursor: pointer;
+    }
+    
+    .close-button{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    body{
+        margin: 10px;
+    }
+
+    .profile img{
+        width: 80%;
+        margin: 0 0 0 70px;
+    }
+
+    .intro{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 40px 0 40px 60px;
+    }
+
+    .message{
+        margin-top: 60px;
+    }
+
+    .job{
+        padding: 10px 0 20px 0;
+    }
+
+    .download-cv, .learn-more{
+        display: block;
+        margin: 0 0 5px 0;
+    }
+
+    .about-me p{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 50px;
+    }
+
+    .certifications div, .projects div{
+        width: 30%;
+        margin: auto;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    #projects{
+        margin-bottom: 30px;
+    }
+
+    .contact-form{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .contact-form button{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+
+    body{
+        background-color: black;
+        margin: 20px 40px 20px 40px;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-left: 20px;
+    }
+    
+    .menu{
+        display: none;
+    }
+    
+    .name{
+        color: white;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    
+    .close-button{
+        display: none;
+    }
+    
+    .links{
+        margin-top: 20px;
+    }
+    
+    .links a{
+        text-decoration: none;
+        margin: 10px;
+        color: rgb(234, 234, 234);
+        font-size: 20px;
+    }
+    
+    .message{
+        margin-top: 80px;
+    }
+    
+    .profile img{
+        width: 500px;
+        border: 10px solid rgb(15, 15, 15);
+        border-radius: 50%;
+    }
+    
+    .greetings{
+        color: white;
+        font-size: 40px;
+        padding: 30px 0 0 0;
+    }
+    
+    .job{
+        color: rgb(164, 164, 164);
+        padding: 20px 0 50px 0;
+    
+    }
+
+
+    .download-cv, .learn-more{
+        display: inline;
+        margin: 0 10px 0 0;
+    }
+    
+    .intro{
+        display: flex;
+        justify-content: space-between;
+        margin: 80px;
+    }
+    
+    .about-me h1,p, #projects h1, #contact h1{
+        text-align: center;
+        color: white;
+        margin: 10px;
+    }
+    
+    .about-me h1, #projects h1, #contact h1{
+        margin: 10px 20px 30px 10px;
+        font-size: 40px;
+    }
+    
+    .about-me p, #projects h1{
+        margin: 10px 300px;
+    }
+    
+    .cert-topic h1, .tech-stack h1{
+        color: gainsboro;
+        text-align: center;
+        margin: 20px 40px;
+    }
+    
+    .certifications, .projects{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .certifications div, .projects div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+        background-color: #212121;
+        margin: 20px 10px 50px 70px;
+        border-radius: 10px;
+        padding: 20px;
+        cursor: pointer;
+    }
+    
+    .certifications div:hover, .projects div:hover{
+        border-bottom: 3px solid rgb(60, 170, 60);
+    }
+    
+    .certifications p, .projects p{
+        color: rgb(60, 170, 60);
+        font-size: large;
+        font-weight: bold;
+    }
+    
+    .certifications a, .projects a{
+        text-decoration: none;
+        color: aliceblue;
+        padding: 10px;
+    }
+    
+    .certifications a:hover, .projects a:hover{
+        color: rgb(106, 158, 255);
+    }
+    
+    .certifications img, .projects img{
+        width: 200px;
+    }
+    
+    .techs{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    
+    .techs div{
+        margin: 10px;
+        padding: 15px;
+        background-color: #212121;
+        border: 2px solid #212121; 
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .techs div:hover{
+        background-color: #1c1c1c;
+    }
+    
+    .contact-form{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .contact-form button{
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .contact-form input {
+        width: 200px;
+        padding: 5px;
+        margin: 10px;
+        background-color: black;
+        border: none;
+        border-bottom: 1px solid gray;
+        color: gray;
+        outline: none; 
+    }
+      
+    
+    .contact-form textarea{
+        margin: 10px;
+        padding: 5px;
+        background-color: black;
+        border: 1px solid grey;
+        outline: none;
+        color: gray;
+    }
+    
+    
+    .contact-form button:hover{
+        background-color: rgba(60, 170, 60, 0.799);
+    }
+    
+    .socials{
+        display: flex;
+        justify-content: center;
+        margin: 50px 0 0 0;
+    }
+    
+    .socials a, img{
+        margin: 10px;
+        width: 40px;
+    }
+    
+    hr{
+        margin: 20px;
+        border: 1px solid gray;
+    }
+    
+    .copyright p{
+        margin: 50px 20px 0 40px;
+    }
+}
