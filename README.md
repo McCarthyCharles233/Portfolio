@@ -1,3 +1,3 @@
 # Portfolio
 
-This is a responsive portfolio made with HTML,CSS and JavaScript
+This is a responsive portfolio website made with HTML,CSS and JavaScript
